@@ -17,10 +17,53 @@ namespace CorebrainCS
         private readonly string _scriptPath = Path.GetFullPath(scriptPath);
         private readonly bool _verbose = verbose;
 
+
+        public string Help()
+        {
+            return ExecuteCommand("--help");
+        }
+
         public string Version()
         {
             return ExecuteCommand("--version");
         }
+
+        public string Configure()
+        {
+            return ExecuteCommand("--configure");
+        }
+
+        public string ListConfigs()
+        {
+            return ExecuteCommand("--list-configs");
+        }
+
+        public string RemoveConfig()
+        {
+            return ExecuteCommand("--remove-config");
+        }
+
+        public string ShowSchema()
+        {
+            return ExecuteCommand("--show-schema");
+        }
+
+        public string ExtractSchema()
+        {
+            return ExecuteCommand("--extract-schema");
+        }
+
+        public string ExtractSchemaToDefaultFile()
+        {
+            return ExecuteCommand("--extract-schema --output-file test");
+        }
+        
+        public string ConfigID()
+        {
+            return ExecuteCommand("--extract-schema --config-id config");
+        }
+
+
 
         public string ExecuteCommand(string arguments)
         {
