@@ -7,7 +7,7 @@
         "type": "process",
         "args": [
           "build",
-          "${workspaceFolder}/CorebrainCSTesting/CorebrainCSTesting.csproj",
+          "${workspaceFolder}/CorebrainCS.Tests/CorebrainCS.Tests.csproj",
           "--configuration",
           "Release"
         ],
@@ -24,7 +24,7 @@
         "args": [
           "run",
           "--project",
-          "${workspaceFolder}/CorebrainCSTesting/CorebrainCSTesting.csproj"
+          "${workspaceFolder}/CorebrainCS.Tests/CorebrainCS.Tests.csproj"
         ],
         "dependsOn": ["Build Project"]
       },

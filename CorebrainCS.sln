@@ -5,7 +5,7 @@ VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CorebrainCS", "CorebrainCS\CorebrainCS.csproj", "{152890AC-4B76-42F7-813B-CB7F3F902B9F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CorebrainCSTesting", "CorebrainCSTesting\CorebrainCSTesting.csproj", "{664BB3EB-0364-4989-879A-D8CCDBCF6B89}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CorebrainCS.Tests", "CorebrainCS.Tests\CorebrainCS.Tests.csproj", "{664BB3EB-0364-4989-879A-D8CCDBCF6B89}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
