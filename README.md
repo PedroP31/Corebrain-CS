@@ -75,11 +75,3 @@ Corebrain-CS/
 ## License
 
 MIT License - See [LICENSE](LICENSE) for details.
-
-## Support
-
-For issues and feature requests, please [open an issue](https://github.com/yourusername/Corebrain-CS/issues).
-
----
-
-📌 **Note**: For production deployments, consider using the [Docker image](https://hub.docker.com/r/yourusername/corebrain-cs) for complete environment isolation.

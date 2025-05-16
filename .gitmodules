@@ -1,4 +1,4 @@
 [submodule "corebrain"]
 	path = corebrain
-	url = git@github.com:ceoweggo/Corebrain.git
+	url = https://github.com/ceoweggo/Corebrain.git
 	branch = pre-release-v0.2.0
