@@ -1,4 +1,4 @@
-﻿using CorebrainCS;
+using CorebrainCS;
 
 Console.WriteLine("Hello, World!");
 
