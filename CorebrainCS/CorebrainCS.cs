@@ -1,4 +1,4 @@
-namespace CorebrainCS;
+﻿namespace CorebrainCS;
 
 using System;
 using System.Diagnostics;
@@ -51,7 +51,9 @@ public class CorebrainCS(string pythonPath = "python", string scriptPath = "core
     return ExecuteCommand("--extract-schema --config-id config");
   }
 
-
+  public string SetToken(string token) {
+    return ExecuteCommand($"--token {token}");
+  }
 
   public string ExecuteCommand(string arguments) {
     if (_verbose) {
