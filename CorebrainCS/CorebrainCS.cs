@@ -55,6 +55,14 @@ public class CorebrainCS(string pythonPath = "python", string scriptPath = "core
     return ExecuteCommand($"--token {token}");
   }
 
+  public string ApiKey(string apikey) {
+    return ExecuteCommand($"--api-key {apikey}");
+  }
+
+  public string ApiUrl(string apiurl) {
+    return ExecuteCommand($"--api-url {apiurl}");
+  }
+
   public string ExecuteCommand(string arguments) {
     if (_verbose) {
       Console.WriteLine($"Executing: {_pythonPath} {_scriptPath} {arguments}");
