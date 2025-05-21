@@ -60,7 +60,18 @@ public class CorebrainCS(string pythonPath = "python", string scriptPath = "core
   }
 
   public string ApiUrl(string apiurl) {
-    return ExecuteCommand($"--api-url {apiurl}");
+    if (string.IsNullOrWhiteSpace(apiurl)) {
+      throw new ArgumentException("API URL cannot be empty or whitespace", nameof(apiurl));
+    }
+
+    if (!Uri.TryCreate(apiurl, UriKind.Absolute, out var uriResult) ||
+        (uriResult.Scheme != Uri.UriSchemeHttp && uriResult.Scheme != Uri.UriSchemeHttps)) {
+      throw new ArgumentException("Invalid API URL format. Must be a valid HTTP/HTTPS URL", nameof(apiurl));
+    }
+
+    // Escape the URL for command line safety
+    var escapedUrl = apiurl.Replace("\"", "\\\"");
+    return ExecuteCommand($"--api-url \"{escapedUrl}\"");
   }
 
   public string ExecuteCommand(string arguments) {
@@ -93,7 +104,7 @@ public class CorebrainCS(string pythonPath = "python", string scriptPath = "core
     }
 
     if (!string.IsNullOrEmpty(error)) {
-      throw new Exception($"Python CLI error: {error}");
+      throw new InvalidOperationException($"Python CLI error: {error}");
     }
 
     return output.Trim();
